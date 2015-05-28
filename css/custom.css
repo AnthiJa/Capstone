@@ -1,0 +1,22 @@
+/*
+ * Custom CSS
+ */
+.formatInfo{
+	font-weight: bold;
+	color:blue;
+}
+label.error {
+	color: #F00;
+	font-weight: bold;
+}
+
+input.error, select.error, textarea.error {
+	border: 1px red solid;
+}
+img { max-width: 100%; }
+
+.red { color : red; }
+
+input#btnSave{
+	width=10em;
+}
