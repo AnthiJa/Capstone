@@ -39,40 +39,40 @@
 
 <body>
 <div data-role="page" id="JNHome">
-    <header data-role="header" data-position="fixed">
-		<div class="col-md-2"><button data-jq-dropdown="#jq-dropdown-1">MENU</button></div>
-		<div class="col-md-4"><p>AnthiJa</p></div>
-		<div class="col-md-6">
-		<div data-role="navbar">
-			<ul>
-				<li><a href="a.html" class="ui-btn-active ui-state-persist">One</a></li>
-				<li><a href="b.html">Two</a></li>
-			</ul>
-		</div><!-- /navbar -->
+    <header data-role="header" data-position="fixed" data-theme="d">
+	<div style="padding:10px" class="container-fluid">
+		<div class="row">
+		<div class="col-xs-2"><p data-jq-dropdown="#jq-dropdown-1" class="h4"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></p></div>
+		<div class="col-xs-6"><p class="h4" >AnthiJa</p></div>
+		<div class="col-xs-2"><p data-jq-dropdown="#jq-dropdown-1" class="h4"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></div>
+		<div class="col-xs-2"><p data-jq-dropdown="#jq-dropdown-1" class="h4"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></p></div>
+		</div>
 		</div>
     </header>
     
     <section data-role="content">
 		<!-- Sidebar -->
         <div id="jq-dropdown-1" class="jq-dropdown jq-dropdown-tip">
-			<div class="jq-dropdown-panel">
-				<ul >
-					<li><a href="#1">Item 1</a></li>
-					<li><a href="#2">Item 2</a></li>
-					<li><a href="#3">Item 3</a></li>
-					<li class="jq-dropdown-divider"></li>
-					<li><a href="#4">Item 4</a></li>
-					<li><a href="#5">Item 5</a></li>
-					<li><a href="#5">Item 6</a></li>
-				</ul>
-			</div>
+			<ul class="jq-dropdown-menu">
+				<li><a href="#1">Item 1</a></li>
+				<li class="jq-dropdown-divider"></li>
+				<li><a href="#2">Item 2</a></li>
+				<li class="jq-dropdown-divider"></li>
+				<li><a href="#3">Item 3</a></li>
+				<li class="jq-dropdown-divider"></li>
+				<li><a href="#4">Item 4</a></li>
+				<li class="jq-dropdown-divider"></li>
+				<li><a href="#5">Item 5</a></li>
+				<li class="jq-dropdown-divider"></li>
+				<li><a href="#5">Item 6</a></li>
+			</ul>
 		</div>
 		
         <div class="container" >
         <!-- Jssor Slider Begin -->
         <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
         <!-- ================================================== -->
-        <div id="slider1_container" class="container-fluid" style="display: none; position: absolute; margin: 0 auto; width: 1140px; height: 442px; overflow: hidden;">
+        <div id="slider1_container" class="container-fluid" style="display: none; position: relative; margin: 0 auto; width: 1140px; height: 442px; overflow: hidden;">
 		
             <!-- Loading Screen -->
             <!-- <div u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -87,7 +87,7 @@
             </div> -->
 
             <!-- Slides Container -->
-            <div u="slides" class="cust2" style="cursor: move; position: relative; left: 0px; top: 0px; width: 1140px; height: 442px;
+            <div u="slides" class="cust2" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1140px; height: 442px;
             overflow: hidden;">
 			<!-- <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px; height: 500px; overflow: hidden;"> -->
                 <div>
@@ -179,6 +179,7 @@
         </div>
         <!-- Jssor Slider End -->
     </div>
+	</div>
 	
     </section>
        
@@ -258,7 +259,6 @@
             $(window).bind("resize", ScaleSlider);
             $(window).bind("orientationchange", ScaleSlider);
             //responsive code end
-			
 			$(function() {
     $("#btnDemo").button({
         icons: {
@@ -267,7 +267,6 @@
         text: false,
         label: 'Close'
     });});
-
 
         });
     </script>
